@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Changed font to Arial with fallback to sans-serif */
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right top, #006BA6, #0496FF);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  color: #FFBC42;
+  font-weight: bold;
+}
+
+.main {
+  width: 25%;
+  height: 70%;
+  padding: 50px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  transition: all 0.3s; /* Added transition for all properties */
+}
+
+.main .input {
+  width: 90%;
+  padding: 15px 25px;
+  border: 3px solid #D81159;
+  outline: none;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: border-color 0.3s; /* Added transition for border color change */
+}
+
+.main .input:focus {
+  border-color: #8F2D56;
+}
+
+.btn,
+.input {
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer; /* Added cursor pointer */
+  transition: background-color 0.3s, color 0.3s; /* Added transition for background color and text color change */
+}
+
+.main .btn {
+  width: 90%;
+  padding: 15px 0;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background: #FFBC42;
+  color: #8F2D56;
+  font-weight: bold;
+}
+
+.main .code {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: bold;
+  transition: opacity 0.3s; /* Added transition for opacity change */
+}
+
+.main .btn:hover {
+  background: #D81159;
+  box-shadow: 0 10px 25px -10px #FFBC42;
+}
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  padding: 10px 30px;
+  background: #07f49e;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 10px 25px -10px #07f49e;
+  transition: opacity 0.3s, visibility 0.3s; /* Added transition for opacity and visibility change */
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+}
